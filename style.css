@@ -1,0 +1,1466 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.img {
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*--------------- PRELOADER -------------*/
+#preloader {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-flicker {
+  -webkit-animation: flickerAnimation 2s infinite;
+  -moz-animation: flickerAnimation 2s infinite;
+  -o-animation: flickerAnimation 2s infinite;
+  animation: flickerAnimation 2s infinite;
+}
+
+#preloader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+}
+/*--------------- HEADER -------------*/
+header {
+  position: relative;
+  transition: 0.3s;
+  z-index: 100;
+  width: 100%;
+  background: black;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+  background-image: url(media/Images/spray1.png);
+  background-size: cover;
+  background-position: bottom;
+  overflow-x: hidden;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  height: 90px;
+  max-width: 1280px;
+  align-content: center;
+  justify-content: space-between;
+}
+.navbar img {
+  width: 80px;
+  object-fit: contain;
+  padding: 0 10px;
+}
+
+.navlinks {
+  width: 1140px;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.navlinks li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navlinks li::after {
+  content: "";
+  background: white;
+  height: 4px;
+  width: 0%;
+  display: block;
+  margin: auto;
+}
+
+.navlinks li:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+}
+/*--------------- HERO -------------*/
+.hero-section {
+  width: 100%;
+  height: 600px;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.hero-video {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  background-color: black;
+}
+
+/*----------------ABOUT SECTION------------*/
+.about-section {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  background: black;
+  box-shadow: 0px -45px 40px 0px rgba(0, 0, 0, 0.5);
+  background-image: url(media/Images/spray3.png);
+  background-size: cover;
+  background-position: bottom;
+  height: 800px;
+}
+
+.about-section .row {
+  display: flex;
+  height: 100%;
+}
+
+.about-section .column1 {
+  flex: 50%;
+  z-index: 2;
+}
+.about-section .column2 {
+  flex: 25%;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 100%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(media/Images/sea-top-view2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.about-section .column3 {
+  flex: 25%;
+  position: relative;
+  z-index: 0;
+}
+
+.about-section .column3 img {
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  right: 5%;
+}
+
+.about-section .text-container {
+  position: absolute;
+  padding: 80px 5% 0 5%;
+}
+
+#scrollTarget {
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 110px;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  z-index: 99;
+  transform: translateX(0px);
+}
+
+.about-section p {
+  padding-top: 5%;
+  font-size: 20px;
+  color: white;
+  width: 45%;
+  line-height: 1.5;
+  font-weight: lighter;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-section .line-top {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #f4364c;
+  z-index: 99;
+  top: 0;
+  right: 0;
+}
+.about-section .line-bottom {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #f4364c;
+  z-index: 99;
+  bottom: 5%;
+  left: 0;
+}
+.mercury-overlay {
+  position: absolute;
+  height: 250px;
+  z-index: 99;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-30deg);
+  visibility: hidden;
+}
+
+/*---------------- ABOUT  SECTION 2 ------------*/
+.about-section2 {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: black;
+  background-image: url(media/Images/spray2.png);
+  background-size: cover;
+  background-position: bottom;
+}
+@media all and (max-width: 768px) {
+  .about-section2 {
+    background-position-x: left;
+  }
+}
+.about-section2 .row {
+  display: flex;
+  height: 1800px;
+}
+
+.about-section2 .column1 {
+  flex: 50%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.about-section2 .column2 {
+  flex: 50%;
+  width: 50%;
+}
+
+.about-section2 .text-container {
+  position: sticky;
+  padding: 110px 5% 60px 5%;
+  top: 0;
+  overflow: hidden;
+}
+.subtitles1 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: 150%;
+  background-position-x: 100%;
+  background-position-y: 40%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+
+.subtitles2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: 150%;
+  background-position-x: 100%;
+  background-position-y: 40%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+
+.subtitles3 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: 150%;
+  background-position-x: 100%;
+  background-position-y: 40%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+.subtitles-selected {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+
+.about-section2 p {
+  padding-top: 30px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: lighter;
+}
+
+.about-section2 .line {
+  width: 100%;
+  background: #f4364c;
+  height: 3px;
+}
+
+.about-section2 .column1 img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  z-index: 4;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  white-space: none;
+}
+
+/*---------------- SERVICES  SECTION  ------------*/
+.services-section {
+  overflow: hidden;
+  width: 100%;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 70%
+    ),
+    url(media/Images/sea-top-view.jpg);
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.services-section .text-container {
+  text-align: center;
+  width: 100%;
+}
+.services-section h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.services-section span {
+  font-size: 40px;
+  color: white;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.527);
+}
+
+.txt-type > .txt {
+  border-right: 0.2rem solid white;
+}
+
+/*---------------- SERVICES  SECTION 2 ------------*/
+.services-section2 {
+  overflow: hidden;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  z-index: 100;
+  box-shadow: 0px -40px 40px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.services-section2 .container {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  max-width: 1140px;
+  padding: 5%;
+}
+.services-section2 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  color: white;
+}
+.services-section2 .container > h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.services-section2 .row {
+  display: flex;
+  overflow: hidden;
+}
+.services-section2 .column {
+  flex: 50%;
+  padding: 10px;
+}
+.services-section2 .column h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: bold;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: 150%;
+  background-position-x: 100%;
+  background-position-y: 40%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.services-section2 p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: lighter;
+}
+
+.services-section2 .line {
+  width: 100%;
+  background: #f4364c;
+  height: 3px;
+}
+#servicesandclients {
+  background-color: black;
+    background-image: url(media/Images/spray2.png);
+    background-size: cover;
+    background-position: bottom;
+}
+@media all and (max-width: 768px) {
+  #servicesandclients {
+    background-position-x: right;
+  }
+}
+/*---------------- CLIENTS  ------------*/
+#clients{
+  background-color: black;
+    background-image: url(media/Images/spray2.png);
+    background-size: cover;
+    background-position: bottom;
+}
+.clients-section {
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+.clients-section .container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+.clients-section .text-container {
+  width: 70%;
+  margin: auto;
+}
+.clients-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 110px;
+  color: white;
+  margin-bottom: 60px;
+  /*background-image: url(media/Images/sea-top-view2.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    z-index: 99;
+    transform: translateX(0px);*/
+}
+.clients-section .text-container p {
+  padding-top: 5%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: lighter;
+  padding-bottom: 80px;
+}
+
+.clients-section .row {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  padding: 0 60px;
+}
+.clients-section .column {
+  display: block;
+  padding: 30px 5%;
+}
+.clients-section img {
+  width: 80px;
+  transition: 0.5s;
+}
+.clients-section img:hover {
+  transform: scale(130%);
+}
+
+.clients-section .line {
+  width: 70%;
+  background: #f4364c;
+  height: 3px;
+  margin: auto;
+}
+/*--------------Latest Project ----------------*/
+
+.bigimage {
+  transition: transform 0.3s ease;
+}
+
+.bigimage:hover {
+  transform: scale(1.04);
+}
+.sm-projects {
+  transition: transform 0.3s ease;
+}
+
+.sm-projects:hover {
+  transform: scale(1.04);
+}
+.p-p{
+text-align: center;
+padding-bottom: 50px;
+}
+.heading-p{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 50px;
+    text-align: center;
+    color: #fff;
+    padding-top: 55px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-bottom: 50px;
+
+}
+.latest-projects{
+  background-image: url(media/Images/spray2c.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2348px;
+    background-size: cover;
+}
+
+
+.latest-project-title h3{
+  padding-top: 14px;
+    padding-left: 25px;
+    padding-bottom: 3px;
+    color: white;
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.big-latest-project-title h3{
+  padding-top: 14px;
+  font-size: 17px;
+    padding-left: 25px;
+    padding-bottom: 3px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.bigimage a{
+  text-decoration: none;
+  padding-left: 25px;
+  color: rgb(59 130 246);
+}
+.project1 a{
+  text-decoration: none;
+  color: rgb(59 130 246);
+}
+ 
+  @media all and (max-width: 768px){
+ /*pure mobile support*/
+ .display-sm{
+  margin-top: 22px;
+ }
+ .bigimage-second{
+  margin-top: 30px;
+ }
+ .big-latest-project-title{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 130px;
+  bottom: 3px;
+  left: 0px !important;
+ 
+}
+ .bigimage a{
+  padding-left: 0px;
+
+}
+ .bigimage {
+  width: 100%;
+  position: relative;
+}
+.bigimage a img{
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+}
+
+.sm-projects {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+.sm-projects a img{
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+}
+.big-latest-project-title{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 130px;
+  bottom: 3px;
+  left: 25px;
+  border-radius: 0px 0px 30px 30px
+}
+.latest-project-title{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 120px;
+  bottom: 3px;
+  border-radius: 0px 0px 30px 30px;
+}
+.latest-project-title a{
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.big-latest-project-title a{
+  padding-top: 14px;
+    padding-left: 25px;
+    padding-bottom: 3px;
+}
+  }
+@media all and (min-width: 769px){
+
+  .project{
+    display: flex;
+  }
+  .conatiner-project{
+    max-width: 1190px;
+    margin: auto;
+    width: 80%;
+  }
+ 
+  .heading-p{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 110px;
+      text-align: center;
+      color: #fff;
+      padding-top: 55px;
+      padding-bottom: 10px;
+      font-weight: bold;
+      padding-bottom: 100px;
+  
+  }
+  .latest-projects{
+    margin-left: auto;
+    margin-right: auto;
+    height: 1412px;
+  }
+  .bigimage-second{
+    margin-top: 20px;
+  }
+  .project-second{
+    margin-top: 15px;
+  }
+  .bigimage{
+    width: 66.666667%;
+    position: relative;
+    margin-right: 28px;
+  }
+  .sm-flexbox{
+    width: 43.333333% !important;
+  }
+  .image-project1{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .notneed{
+    margin-bottom: 0px !important;
+  }
+
+  /*.bigimage {
+    margin-left: 6.5%;
+    float: left;
+    width: 44%;
+    position: relative;
+}
+*/
+  .bigimage a img{
+    width: 100%;
+    border-radius: 1rem;
+  }
+  
+  /*
+  .sm-projects {
+    float: right;
+    width: 46%;
+    position: relative;
+    margin-bottom: 10px;
+}
+*/
+  .sm-projects a img{
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .big-latest-project-title{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 130px;
+    bottom: 3px;
+    left: 25px;
+    border-radius: 0px 0px 1rem 1rem
+  }
+  .latest-project-title{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 120px;
+    bottom: 3px;
+    border-radius: 0px 0px 1rem 1rem;
+  }
+  .latest-project-title a{
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+}
+
+@media all and (min-width: 1100px) {
+
+ 
+  .bigimage a img{
+    border-radius: 1rem;
+  }
+  
+  /*
+  .sm-projects{
+    float: right;
+    width: 30%;
+    margin-right: 42px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  */
+  .sm-projects a img{
+    border-radius: 1rem;
+  }
+  .big-latest-project-title{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px;
+    bottom: 3px;
+    border-radius: 0px 0px 1rem 1rem;
+  }
+  .latest-project-title{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px;
+    bottom: 3px;
+    border-radius: 0px 0px 1rem 1rem;
+  }
+  .latest-project-title a{
+    padding-top: 5px;
+    padding-left: 25px;
+  }
+}
+
+/*---------------GALLERY SECTION---------------*/
+.gallery-section {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.gallery-section .container {
+  background: rgb(26, 26, 26);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.carrusel {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px 0px;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carrusel-item1 {
+  min-width: 600px;
+  height: 700px;
+  outline: none;
+  margin: auto;
+}
+
+.carrusel-item2 {
+  min-width: 600px;
+  height: 700px;
+  outline: none;
+  margin: auto;
+}
+
+.carrusel-item1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carrusel-item2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.1);
+}
+
+/*---------------FOOTER SECTION---------------*/
+.footer-section {
+  height: 600px;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px -45px 40px 0px rgba(0, 0, 0, 0.5);
+  background-image: url(media/Images/spray1.png);
+  background-size: cover;
+  background-position: center;
+}
+.footer-section .text-container p {
+  color: white;
+  padding: 20px 0px 60px 0px;
+  font-weight: bold;
+}
+.footer-section .container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 600px;
+  overflow: hidden;
+}
+.contact-phone {
+  position: relative;
+  margin: auto;
+  transition: 0.3s;
+}
+.contact-phone:hover {
+  transform: scale(130%);
+}
+.contact-phone .phone {
+  position: absolute;
+  color: turquoise;
+  top: 164px;
+  left: 20px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.contact-phone .email {
+  position: absolute;
+  color: turquoise;
+  top: 202px;
+  left: 20px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: lighter;
+}
+.contact-phone p:hover {
+  color: #f4364c;
+  transform: scale(105%);
+}
+
+.contact-phone img {
+  height: 400px;
+}
+.phone-container {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.phone-container small {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+.footer-section .right-container {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.footer-section .text-container {
+  padding: 10%;
+  height: 400px;
+  margin: auto;
+}
+
+.footer-section .text-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  background-image: url(media/Images/sea-top-view2.jpg);
+  background-size: 150%;
+  background-position-x: 150%;
+  background-position-y: 55%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  z-index: 2;
+}
+.footer-section .social-icons {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.footer-section .social-icons > * {
+  color: lightgray;
+  margin: auto;
+  font-size: 40px;
+  cursor: pointer;
+}
+.footer-section .social-icons > *:hover {
+  color: #f4364c;
+  margin: auto;
+  font-size: 40px;
+  transform: scale(115%);
+}
+/*---------------- RESPONSIVE HEADER  ------------*/
+@media all and (max-width: 768px) {
+  header {
+    max-width: 100%;
+  }
+  .navbar {
+    max-width: 100%;
+  }
+  .navbar img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15%;
+  }
+
+  .navlinks {
+    visibility: hidden;
+  }
+
+  .navlinks li {
+  }
+
+  .navlinks li::after {
+  }
+  .navlinks li:hover::after {
+  }
+
+  .navlinks li a {
+  }
+}
+
+/*--------------- RESPONSIVE HERO -------------*/
+@media all and (min-width: 768px) {
+  .hero-section .text-container {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) {
+  .hero-section {
+    background-image: url(media/Images/IMG_5455.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-video {
+    display: none;
+  }
+
+  .hero-section .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    height: 100%;
+  }
+  .hero-section img {
+    margin: auto;
+    width: 40%;
+  }
+  .hero-sidebar {
+    display: none;
+  }
+}
+/*---------------- RESPONSIVE  ABOUT SECTION ------------*/
+@media all and (max-width: 768px) {
+  .about-section {
+    height: 700px;
+  }
+
+  .about-section .column3 {
+    flex: 0;
+  }
+  .about-section .column3 img {
+    visibility: hidden;
+  }
+  .about-section .column2 {
+    flex: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  #scrollTarget {
+    font-size: 60px;
+  }
+  .about-section p {
+    text-align: left;
+  }
+  .about-section .text-container p {
+    font-size: 12px;
+  }
+}
+
+/*---------------- RESPONSIVE  ABOUT SECTION  2------------*/
+@media all and (max-width: 768px) {
+  .about-section2 .text-container {
+    padding-top: 50px;
+  }
+
+  .subtitles1 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .subtitles2 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .subtitles3 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .subtitles-selected {
+    font-size: 30px;
+    text-align: left;
+  }
+  .about-section2 p {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+@media all and (max-width: 400px) {
+  .about-section2 .text-container {
+    padding-top: 50px;
+  }
+
+  .subtitles1 {
+    font-size: 22px;
+    text-align: left;
+  }
+  .subtitles2 {
+    font-size: 22px;
+    text-align: left;
+  }
+  .subtitles3 {
+    font-size: 22px;
+    text-align: left;
+  }
+  .subtitles-selected {
+    font-size: 22px;
+    text-align: left;
+  }
+  .about-section2 p {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+/*---------------- RESPONSIVE  SERVICES SECTION ------------*/
+@media all and (max-width: 768px) {
+  .services-section {
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.2) 70%
+      ),
+      url(media/Images/sea-top-view-vertical.jpg);
+  }
+
+  .services-section .text-container {
+  }
+  .services-section h1 {
+    font-size: 40px;
+  }
+
+  .services-section span {
+    font-size: 24px;
+  }
+
+  .txt-type > .txt {
+  }
+}
+
+/*---------------- RESPONSIVE  SERVICES SECTION 2 ------------*/
+@media all and (max-width: 768px) {
+  .services-section2 .container {
+  }
+  .services-section2 h1 {
+    font-size: 60px;
+  }
+  .services-section2 .container > h2 {
+    font-size: 40px;
+  }
+  .services-section2 .row {
+  }
+  .services-section2 .column {
+  }
+  .services-section2 .column h2 {
+    font-size: 50px;
+  }
+  .services-section2 p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .services-section2 .line {
+  }
+}
+
+/*------------- DROPDOWN MENU -------------*/
+/* nav-icon-5 */
+#burgerContainer {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-icon {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-icon span {
+  background-color: white;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+.nav-icon span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.nav-icon span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+.nav-icon span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.nav-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+#dropdown {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0px;
+  background: black;
+  height: 390px;
+  padding-top: 120px;
+  transition: 0.3s;
+  z-index: 99;
+  transform: translateY(-390px);
+  background-image: url(media/Images/spray3.png);
+  background-position: center;
+  background-size: cover;
+}
+#dropdown ul li {
+  padding: 10px;
+}
+#dropdown ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  color: white;
+}
+#dropdown.open {
+  transform: translateY(0px);
+  transition: 0.3s;
+}
+
+#dropdown:not(.open) {
+  transform: translateY(-390px);
+  transition: 0.3s;
+}
+
+@media all and (min-width: 768px) {
+  #burgerContainer {
+    visibility: hidden;
+  }
+  #dropdown {
+    display: none;
+  }
+}
+
+/*---------------- RESPONSIVE  CLIENTS SECTION ------------*/
+@media all and (max-width: 768px) {
+  .clients-section .text-container {
+    width: 95%;
+    margin: auto;
+  }
+  .clients-section .container {
+    padding-top: 0px;
+  }
+  .clients-section h2 {
+    font-size: 50px;
+  }
+  .clients .text-container p {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .clients-section .column {
+    padding: 20px 4%;
+  }
+  .clients-section img {
+    width: 45px;
+  }
+}
+
+/*---------------- RESPONSIVE  FOOTER SECTION ------------*/
+@media all and (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+  .footer-section {
+    width: 100%;
+    height: 1200px;
+  }
+  .footer-section .container {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  .contact-phone {
+    transform: scale(130%);
+  }
+  .contact-phone:hover {
+    transform: scale(130%);
+  }
+  .contact-phone img {
+    height: 400px;
+  }
+  .phone-container {
+    width: 100%;
+    height: 50%;
+  }
+  .phone-container small {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+  }
+  .footer-section .right-container {
+    width: 100%;
+    height: 50%;
+  }
+  .footer-section .text-container {
+    padding: 10%;
+    height: 400px;
+    margin: auto;
+  }
+
+  .footer-section .text-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    background-image: url(media/Images/sea-top-view2.jpg);
+    background-size: 150%;
+    background-position-x: 150%;
+    background-position-y: 55%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    z-index: 2;
+  }
+  .footer-section .social-icons {
+    display: flex;
+    width: 70%;
+    margin: auto;
+  }
+  .footer-section .social-icons > * {
+    color: white;
+    margin: auto;
+    font-size: 40px;
+  }
+  .footer-section .social-icons > *:hover {
+    color: #f4364c;
+    margin: auto;
+    font-size: 40px;
+    transform: scale(115%);
+  }
+}
